@@ -54,6 +54,30 @@
         });
 ##### ->The addMessage() function is an http end point and it adds the message.
 
+## f.Add the makeUpperCase() function
+##### ->Even about these it is mentioned above that it transforms text into Uppercase text.And so we should add lines in the index.js
+        // Listens for new messages added to /messages/:documentId/original and creates an
+        // uppercase version of the message to /messages/:documentId/uppercase
+        exports.makeUppercase = functions.firestore
+        .document("/messages/{documentId}")
+        .onCreate((snap, context) => {
+            // Grab the current value of what was written to Firestore.
+            const original = snap.data().original;
+
+            // Access the parameter `{documentId}` with `context.params`
+            functions.logger.log("Uppercasing", context.params.documentId, original);
+
+            const uppercase = original.toUpperCase();
+
+            // You must return a Promise when performing asynchronous tasks inside a Functions such as
+            // writing to Firestore.
+            // Setting an 'uppercase' field in Firestore document returns a Promise.
+            return snap.ref.set({ uppercase }, { merge: true });
+        });
+##### ->The above transform the data or text that is given by the user in the console into uppercase Text.
+
+## 
+
 
 
 
