@@ -76,9 +76,10 @@
         });
 ##### ->The above transform the data or text that is given by the user in the console into uppercase Text.
 
-## 
-
-
-
-
-
+## g.Emulate Exceution of your Function
+##### ->Here the emulators are been started by using "firebase emulators:start" and check the output for the URL of emulator suite.
+##### It defaults to localhost:4000, but may be hosted on a different port on your machine. Enter that URL in your browser to open the Emulator Suite UI.
+##### ->Now go back emulatpr tab and check the output we can see a similar like "http://localhost:5001/MY_PROJECT/us-central1/addMessage". This represents you are in track and we can see project name is replaced by it's id.
+##### ->Now add "?text=hii" to the above link as "http://localhost:5001/MY_PROJECT/us-central1/addMessage?text=hii" now go to "Emulator Suite UI" webpage and tap logs in it,there we can see that both 2 type execution are started.
+##### ->Now tap on the firestore there we can see addmessage : hii,and in the makeUpperCase : HII.
+##### ->Changes can be made in text again and again,so we add Message and make text as UpperCase.
