@@ -2,8 +2,8 @@
 **Table Of Contents**
 
 **Objective**: The guide below shows how to write,test,deploy two functions.
----> An "add message" function that exposes a URL that accepts a text value and writes it to Cloud Firestore.
----> A "make uppercase" function that triggers on a Cloud Firestore write and transforms the text to uppercase.
+###### ---> An "add message" function that exposes a URL that accepts a text value and writes it to Cloud Firestore.
+###### ---> A "make uppercase" function that triggers on a Cloud Firestore write and transforms the text to uppercase.
 
 ## a.Create a Firebase Project
 ##### ->Go to Firebase Console in browser and tap on the "Add Project".
